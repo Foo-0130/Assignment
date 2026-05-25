@@ -139,3 +139,50 @@ The work done $W$ is positive when the system expands against an external pressu
 :::
 
 ::::
+---
+
+## Process Capability: Machine 2 (Pressure 200kPa, Temp 338K)
+
+:::: {.columns}
+::: {.column width="50%"}
+### PartLength Analysis
+
+**Filtered Conditions:**
+- Machine: 2
+- Pressure: 200kPa
+- Temperature: 338K
+
+**Descriptive Statistics:**
+- Mean: 48.3725
+- Standard Deviation: 0.5052
+
+**Process Capability (Assumed USL=52, LSL=48):**
+- Cp: 1.3197
+- Cpk: 0.2458
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partlength_distribution_m2.html' width='100%' height='500px' style='border:none;'></iframe>
+:::
+
+---
+
+### PartResistance Analysis
+
+**Filtered Conditions:**
+- Machine: 2
+- Pressure: 200kPa
+- Temperature: 338K
+
+**Descriptive Statistics:**
+- Mean: 4.1884
+- Standard Deviation: 0.3942
+
+**Process Capability (Assumed USL=7.5, LSL=6.5):**
+- Cp: 0.4228
+- Cpk: -1.9546
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partresistance_distribution_m2.html' width='100%' height='500px' style='border:none;'></iframe>
+:::
+
+::::

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>slides-with-biblio</title>
+  <title>slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -24,26 +24,7 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/serif.css" id="theme">
   <button id="nav-btn" onclick="toggleNavMenu()" title="Open Slide List">📋 MENU</button>
 
@@ -558,243 +539,69 @@
     <div class="slides">
 
 
-<section class="slide level1">
-
+<section id="machine-1-analysis" class="slide level1">
+<h1>Machine 1 Analysis</h1>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h2 id="sample-slides">Sample slides</h2>
-<h4 id="placeholdername">PlaceHolderName</h4>
-<h4 id="universiti-malaysia-perlis">Universiti Malaysia Perlis</h4>
-<h4 id="placeholderemail.com"><a
-href="mailto:placeholder@email.com">placeholder@email.com</a></h4>
-<audio id="bg-music" src="media/audio/sb.m4a" loop>
-</audio>
-<div id="audio-credit"
-style="position: absolute; bottom: 40px; right: 20px; font-size: 0.6em; opacity: 0.6;">
-<p>Music: “Adrift” by Scott Buckley (CC BY 4.0)</p>
-</div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('bg-music');
-    const credit = document.getElementById('audio-credit');
-
-    // hide credit by default
-    credit.style.display = 'none';
-
-    const test = new Audio('media/audio/bgm.mp3');
-
-    test.addEventListener('canplaythrough', () => {
-      // bgm.mp3 exists → use it, keep credit hidden
-      audio.src = 'media/audio/bgm.mp3';
-    }, { once: true });
-
-    test.addEventListener('error', () => {
-      // bgm.mp3 missing → sb.m4a will play → show credit
-      credit.style.display = 'block';
-    }, { once: true });
-
-    document.addEventListener('click', () => {
-      if (Reveal.getIndices().h === 0) {
-        audio.volume = 0.5;
-        audio.play();
-      }
-    }, { once: true });
-
-    Reveal.on('slidechanged', (event) => {
-      if (event.indexh > 0) { audio.pause(); }
-      else { audio.play(); }
-    });
-  });
-</script>
-</div><div class="column" style="width:50%;">
-<p><img data-src="media/pics/logo1.png" /></p>
-</div>
-</div>
-</section>
-<section class="slide level1">
-
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="slide-one">Slide one</h3>
-<p><strong>Key Concepts:</strong> - Energy conservation per <span
-class="citation" data-cites="carnot1824">(1)</span>. - <span
-class="math inline">\(\Delta U = Q - W\)</span></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="media/pics/sample.png" /></p>
-</div>
-</div>
-</section>
-<section class="slide level1">
-
-<p><span class="slide-title"
-data-title="My Hidden Slide Name"></span></p>
-<p><img data-src="media/pics/wide.jpeg" /></p>
-</section>
-<section class="slide level1">
-
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="the-master-equation">The Master Equation</h3>
-<p>The fundamental relation of thermodynamics:</p>
-<p><span class="math display">\[\Delta U = Q - W\]</span></p>
-<p>The work done <span class="math inline">\(W\)</span> is positive when
-the system expands against an external pressure.</p>
-</div><div class="column" style="width:50%;">
-<video data-src="media/videos/sample.mp4" data-autoplay loop muted width="100%">
-</video>
-</div>
-</div>
-</section>
-<section class="slide level1">
-
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="visualizing-the-gas-law">Visualizing the Gas Law</h3>
-<p><strong>Interactive Model:</strong></p>
+<h3 id="machine-1-performance">Machine 1 Performance</h3>
+<p><strong>Condition:</strong> 200kPa / 338K</p>
 <ul>
-<li>P, V, and T relationships.</li>
-<li>Use the slider to adjust pressure.</li>
-<li>Observe the phase boundary.</li>
+<li>The process is stable and under control.</li>
+<li><strong>Capability Metrics:</strong>
+<ul>
+<li><span class="math inline">\(C_p\)</span>: 1.38</li>
+<li><span class="math inline">\(C_{pk}\)</span>: 1.37</li>
+</ul></li>
+<li>The machine is capable and well-centered.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<iframe data-src="media/plots/sample.html" width="100%" height="500px" style="border:none;" scrolling="no">
+<iframe data-src="media/plots/m1_cc.html" width="100%" height="400px" style="border:none;">
 </iframe>
+<p><img data-src="media/pics/m1_cap.png" /></p>
 </div>
 </div>
 </section>
-<section class="slide level1">
-
-<h2
-id="control-charts-process-capability-machine-1-pressure-200kpa-temp-338k">Control
-Charts &amp; Process Capability (Machine 1, Pressure 200kPa, Temp
-338K)</h2>
+<section id="machine-2-analysis" class="slide level1">
+<h1>Machine 2 Analysis</h1>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="partlength-analysis">PartLength Analysis</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 1 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p><strong>Descriptive Statistics:</strong> - Mean: 49.9772 - Standard
-Deviation: 1.2387</p>
-<p><strong>Process Capability (Assumed USL=52, LSL=48):</strong> - Cp:
-0.5382 - Cpk: 0.5321</p>
-<div class="column" style="width:50%;">
-<iframe data-src="media/plots/partlength_xbar_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-<iframe data-src="media/plots/partlength_r_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-</div>
-<hr />
-<h3 id="partresistance-analysis">PartResistance Analysis</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 1 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p><strong>Descriptive Statistics:</strong> - Mean: 5.9438 - Standard
-Deviation: 0.2478</p>
-<p><strong>Process Capability (Assumed USL=7.5, LSL=6.5):</strong> - Cp:
-0.6725 - Cpk: -0.7481</p>
-<div class="column" style="width:50%;">
-<iframe data-src="media/plots/partresistance_xbar_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-<iframe data-src="media/plots/partresistance_r_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-</div>
-</div><hr /><h2
-id="process-capability-machine-2-pressure-200kpa-temp-338k">Process
-Capability: Machine 2 (Pressure 200kPa, Temp 338K)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="partlength-analysis-1">PartLength Analysis</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 2 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p><strong>Descriptive Statistics:</strong> - Mean: 48.3725 - Standard
-Deviation: 0.5052</p>
-<p><strong>Process Capability (Assumed USL=52, LSL=48):</strong> - Cp:
-1.3197 - Cpk: 0.2458</p>
-<div class="column" style="width:50%;">
-<iframe data-src="media/plots/partlength_distribution_m2.html" width="100%" height="500px" style="border:none;">
-</iframe>
-</div>
-<hr />
-<h3 id="partresistance-analysis-1">PartResistance Analysis</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 2 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p><strong>Descriptive Statistics:</strong> - Mean: 4.1884 - Standard
-Deviation: 0.3942</p>
-<p><strong>Process Capability (Assumed USL=7.5, LSL=6.5):</strong> - Cp:
-0.4228 - Cpk: -1.9546</p>
-<div class="column" style="width:50%;">
-<iframe data-src="media/plots/partresistance_distribution_m2.html" width="100%" height="500px" style="border:none;">
-</iframe>
-</div>
-</div><hr /><h2
-id="control-charts-machine-1-pressure-200kpa-temp-338k">Control Charts
-(Machine 1, Pressure 200kPa, Temp 338K)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="partlength-control-charts">PartLength Control Charts</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 1 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p>The X-bar and R control charts for PartLength show the process mean
-and variability over time. Points within the control limits indicate a
-stable process, while points outside suggest special causes of
-variation.</p>
+<h3 id="machine-2-performance">Machine 2 Performance</h3>
+<p><strong>Condition:</strong> 200kPa / 338K</p>
+<ul>
+<li><strong>Capability Metrics:</strong>
+<ul>
+<li><span class="math inline">\(C_p\)</span>: 3.05</li>
+<li><span class="math inline">\(C_{pk}\)</span>: 2.06</li>
+</ul></li>
+<li>Machine 2 shows excellent precision but a noticeable mean
+shift.</li>
+</ul>
 </div><div class="column" style="width:50%;">
-<iframe data-src="media/plots/partlength_xbar_chart_new.html" width="100%" height="250px" style="border:none;">
+<iframe data-src="media/plots/m2_cc.html" width="100%" height="400px" style="border:none;">
 </iframe>
-<iframe data-src="media/plots/partlength_r_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-</div><hr /><h3 id="partresistance-control-charts">PartResistance
-Control Charts</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 1 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p>Similarly, the X-bar and R control charts for PartResistance monitor
-its process mean and variability. These charts are crucial for
-identifying and addressing inconsistencies in the manufacturing
-process.</p>
-</div>
-<div class="column" style="width:50%;">
-<iframe data-src="media/plots/partresistance_xbar_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-<iframe data-src="media/plots/partresistance_r_chart_new.html" width="100%" height="250px" style="border:none;">
-</iframe>
-</div>
-</div>
-<hr /><h2
-id="process-capability-machine-1-pressure-200kpa-temp-338k">Process
-Capability: Machine 1 (Pressure 200kPa, Temp 338K)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="partlength-analysis-2">PartLength Analysis</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 1 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p><strong>Descriptive Statistics:</strong> - Mean: 49.9772 - Standard
-Deviation: 1.2387</p>
-<p><strong>Process Capability (Assumed USL=52, LSL=48):</strong> - Cp:
-0.5382 - Cpk: 0.5321</p>
-</div><div class="column" style="width:50%;">
-<iframe data-src="media/plots/partlength_distribution_m2.html" width="100%" height="500px" style="border:none;">
-</iframe>
-</div><hr /><h3 id="partresistance-analysis-2">PartResistance
-Analysis</h3>
-<p><strong>Filtered Conditions:</strong> - Machine: 1 - Pressure: 200kPa
-- Temperature: 338K</p>
-<p><strong>Descriptive Statistics:</strong> - Mean: 5.9438 - Standard
-Deviation: 0.2478</p>
-<p><strong>Process Capability (Assumed USL=7.5, LSL=6.5):</strong> - Cp:
-0.6725 - Cpk: -0.7481</p>
-</div>
-<div class="column" style="width:50%;">
-<iframe data-src="media/plots/partresistance_distribution_m2.html" width="100%" height="500px" style="border:none;">
-</iframe>
+<p><img data-src="media/pics/m2_cap.png" /></p>
 </div>
 </div>
 </section>
-<section id="bibliography" class="slide level1">
-<h1>Bibliography</h1>
-<div id="refs" class="references csl-bib-body" role="list">
-<div id="ref-carnot1824" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Sadi
-Carnot. Reflections on the motive power of fire. Annals of Physics.
-1824;1:1–100.</div>
+<section id="machine-3-analysis" class="slide level1">
+<h1>Machine 3 Analysis</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="machine-3-performance">Machine 3 Performance</h3>
+<p><strong>Condition:</strong> 200kPa / 338K</p>
+<ul>
+<li><strong>Capability Metrics:</strong>
+<ul>
+<li><span class="math inline">\(C_p\)</span>: 1.36</li>
+<li><span class="math inline">\(C_{pk}\)</span>: 1.00</li>
+</ul></li>
+<li>Machine 3 is at the threshold of capability and requires centering
+adjustments.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<iframe data-src="media/plots/m3_cc.html" width="100%" height="400px" style="border:none;">
+</iframe>
+<p><img data-src="media/pics/m3_cap.png" /></p>
 </div>
 </div>
 </section>
@@ -957,7 +764,7 @@ Carnot. Reflections on the motive power of fire. Annals of Physics.
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: "90%",
+        width: 90%,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

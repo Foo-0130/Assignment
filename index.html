@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>slides</title>
+  <title>slides-with-biblio</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -24,7 +24,26 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/serif.css" id="theme">
   <button id="nav-btn" onclick="toggleNavMenu()" title="Open Slide List">📋 MENU</button>
 
@@ -605,6 +624,12 @@ adjustments.</li>
 </div>
 </div>
 </section>
+<section id="bibliography" class="slide level1">
+<h1>Bibliography</h1>
+<div id="refs" role="list">
+
+</div>
+</section>
     </div>
   </div>
 
@@ -764,7 +789,7 @@ adjustments.</li>
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 90%,
+        width: "90%",
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -797,5 +822,3 @@ adjustments.</li>
     </script>
     </body>
 </html>
-
-<!-- Build Time: 2026-05-25 04:11:33 -->

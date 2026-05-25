@@ -186,3 +186,93 @@ The work done $W$ is positive when the system expands against an external pressu
 :::
 
 ::::
+---
+
+## Control Charts (Machine 1, Pressure 200kPa, Temp 338K)
+
+:::: {.columns}
+::: {.column width="50%"}
+### PartLength Control Charts
+
+**Filtered Conditions:**
+- Machine: 1
+- Pressure: 200kPa
+- Temperature: 338K
+
+The X-bar and R control charts for PartLength show the process mean and variability over time. Points within the control limits indicate a stable process, while points outside suggest special causes of variation.
+:::
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partlength_xbar_chart_new.html' width='100%' height='250px' style='border:none;'></iframe>
+<iframe data-src='media/plots/partlength_r_chart_new.html' width='100%' height='250px' style='border:none;'></iframe>
+:::
+
+---
+
+### PartResistance Control Charts
+
+**Filtered Conditions:**
+- Machine: 1
+- Pressure: 200kPa
+- Temperature: 338K
+
+Similarly, the X-bar and R control charts for PartResistance monitor its process mean and variability. These charts are crucial for identifying and addressing inconsistencies in the manufacturing process.
+:::
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partresistance_xbar_chart_new.html' width='100%' height='250px' style='border:none;'></iframe>
+<iframe data-src='media/plots/partresistance_r_chart_new.html' width='100%' height='250px' style='border:none;'></iframe>
+:::
+
+::::
+---
+
+## Process Capability: Machine 1 (Pressure 200kPa, Temp 338K)
+
+:::: {.columns}
+::: {.column width="50%"}
+### PartLength Analysis
+
+**Filtered Conditions:**
+- Machine: 1
+- Pressure: 200kPa
+- Temperature: 338K
+
+**Descriptive Statistics:**
+- Mean: 49.9772
+- Standard Deviation: 1.2387
+
+**Process Capability (Assumed USL=52, LSL=48):**
+- Cp: 0.5382
+- Cpk: 0.5321
+
+:::
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partlength_distribution_m2.html' width='100%' height='500px' style='border:none;'></iframe>
+:::
+
+---
+
+### PartResistance Analysis
+
+**Filtered Conditions:**
+- Machine: 1
+- Pressure: 200kPa
+- Temperature: 338K
+
+**Descriptive Statistics:**
+- Mean: 5.9438
+- Standard Deviation: 0.2478
+
+**Process Capability (Assumed USL=7.5, LSL=6.5):**
+- Cp: 0.6725
+- Cpk: -0.7481
+
+:::
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partresistance_distribution_m2.html' width='100%' height='500px' style='border:none;'></iframe>
+:::
+
+::::
